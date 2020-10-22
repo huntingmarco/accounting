@@ -9,6 +9,10 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
 gem 'pg', '>= 0.18', '< 2.0'
 
 gem 'sendgrid-ruby'
+gem 'devise'
+gem 'milia', '~>1.3', :git => 'https://github.com/yshmarov/milia.git'
+gem 'twitter-bootstrap-rails'
+gem 'devise-bootstrap-views'
 
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
@@ -59,3 +63,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :production do
 	gem 'rails_12factor'
 end
+
+gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
