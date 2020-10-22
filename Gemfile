@@ -14,6 +14,9 @@ gem 'milia', '~>1.3', :git => 'https://github.com/yshmarov/milia.git'
 gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views'
 
+# Use jquery as the JavaScript library
+gem 'jquery-rails'
+
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
