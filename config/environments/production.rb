@@ -75,7 +75,7 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "accounting_production"
 
   config.action_mailer.perform_caching = false
-  config.action_mailer.default_url_options = {host: 'jannel-accounting-system.herokuapp.com'}
+  config.action_mailer.default_url_options = {host: 'jannel-accounting-system.herokuapp.com', :protocol => 'https'}
 # Setup the mailer config
 config.action_mailer.delivery_method = :smtp
 config.action_mailer.perform_deliveries = true
