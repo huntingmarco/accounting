@@ -1,6 +1,18 @@
 Rails.application.configure do
    
+  config.action_mailer.default_url_options = { :host => 'jannel-accounting-system.herokuapp.com', :protocol => 'https' }
 
+  ActionMailer::Base.delivery_method = :smtp
+
+  ActionMailer::Base.smtp_settings = {
+    :address        => 'smtp.sendgrid.net',
+    :port           => '587',
+    :from           => 'annebuntu@gmail.com',
+    :authentication => :plain,
+    :user_name      => ENV['SENDGRID_USERNAME'],
+    :password       => ENV['SENDGRID_PASSWORD'],
+    :domain         => 'jannel-accounting-system.herokuapp.com'
+  }
 
 
 
