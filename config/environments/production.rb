@@ -1,32 +1,23 @@
 Rails.application.configure do
    
   # devise says to define default url
-  #config.action_mailer.default_url_options = { :host => 'secure.simple-milia-app.com', :protocol => 'https' }
+  config.action_mailer.default_url_options = { :host => 'jannel-accounting-system.herokuapp.com', :protocol => 'https' }
+  ActionMailer::Base.delivery_method = :smtp
 
-  #ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings = {
+    :address        => 'smtp.sendgrid.net',
+    :port           => '587',
+    :authentication => :plain,
+    :user_name      => ENV['SENDGRID_USERNAME'],  ## Refer to key SENDGRID_USERNAME
+    :password       => ENV['SENDGRID_PASSWORD'],  ## Refer to key SENDGRID_PASSWORD
+    :domain         => 'heroku.com',
+    :enable_starttls_auto => true
+  } 
 
-  #ActionMailer::Base.smtp_settings = {
-  #  :address        => 'smtp.sendgrid.net',
-  #  :port           => '587',
-  #  :authentication => :plain,
-  #  :user_name      => ENV['SENDGRID_USERNAME'],
-  #  :password       => ENV['SENDGRID_PASSWORD'],
-  #  :domain         => 'heroku.com'
-  #}
 
- # Setup the mailer config
- config.action_mailer.default_url_options = { :host => 'jannel-accounting-system.herokuapp.com'}
- config.action_mailer.delivery_method = :smtp
- config.action_mailer.perform_deliveries = true
- config.action_mailer.smtp_settings = {
-   :user_name => ENV['SENDGRID_USERNAME'],
-   :password => ENV['SENDGRID_PASSWORD'],
-   :domain => 'jannel-accounting-system.herokuapp.com',
-   :address => 'smtp.sendgrid.net',
-   :port => 587,
-   :authentication => :plain,
-   :enable_starttls_auto => true
- }
+
+
+
 
 
   # Settings specified here will take precedence over those in config/application.rb.
