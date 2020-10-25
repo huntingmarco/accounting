@@ -1,5 +1,6 @@
 Rails.application.configure do
    
+  #config.action_mailer.default_url_options = { :host => 'jannel-accounting-system.herokuapp.com', :protocol => 'https' }
   config.action_mailer.default_url_options = { :host => 'jannel-accounting-system.herokuapp.com', :protocol => 'https' }
 
   ActionMailer::Base.delivery_method = :smtp
