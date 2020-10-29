@@ -10,7 +10,8 @@ gem 'pg', '>= 0.18', '< 2.0'
 
 gem 'sendgrid-ruby'
 gem 'devise'
-gem 'milia', '~>1.3', :git => 'https://github.com/yshmarov/milia.git'
+#gem 'milia', '~>1.3', :git => 'https://github.com/yshmarov/milia.git'
+gem 'milia'
 gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views'
 
