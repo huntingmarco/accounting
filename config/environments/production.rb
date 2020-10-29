@@ -1,24 +1,5 @@
 Rails.application.configure do
    
-  #config.action_mailer.default_url_options = { :host => 'jannel-accounting-system.herokuapp.com', :protocol => 'https' }
-  config.action_mailer.default_url_options = { :host => 'jannel-accounting-system.herokuapp.com', :protocol => 'https' }
-
-  ActionMailer::Base.delivery_method = :smtp
-
-  ActionMailer::Base.smtp_settings = {
-    :address        => 'smtp.sendgrid.net',
-    :port           => '587',
-    :from           => 'annebuntu@gmail.com',
-    :authentication => :plain,
-    :user_name      => ENV['SENDGRID_USERNAME'],
-    :password       => ENV['SENDGRID_PASSWORD'],
-    :domain         => 'herokuapp.com'
-  }
-
-
-
-
-
 
 
 
@@ -33,7 +14,7 @@ Rails.application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
   # devise says to define default url
-  ActionMailer::Base.delivery_method = :smtp
+  config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_url_options = { :host => 'jannel-accounting-system.herokuapp.com', :protocol => 'https' }
 
   # Full error reports are disabled and caching is turned on.
